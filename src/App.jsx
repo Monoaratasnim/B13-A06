@@ -11,12 +11,12 @@ function App() {
   const [products, setProducts] = useState([]);
 
   // Fetch products from public/products.json
-  useEffect(() => {
-    fetch('/products.json')
-      .then(res => res.json())
-      .then(data => setProducts(data))
-      .catch(err => console.error('Error fetching products:', err));
-  }, []);
+ useEffect(() => {
+  fetch(`${import.meta.env.BASE_URL}products.json`)
+    .then(res => res.json())
+    .then(data => setProducts(data))
+    .catch(err => console.log(err));
+}, []);
 
   return (
     <>
