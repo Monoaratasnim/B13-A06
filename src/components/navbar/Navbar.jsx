@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,13 +28,15 @@ const Navbar = () => {
         {/* 🔹 RIGHT */}
         <div className="flex items-center gap-5">
 
-          {/* Cart (hidden on very small screens if needed) */}
-          <svg xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-600 cursor-pointer"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5" />
-          </svg>
+       <div className="flex items-center gap-1 cursor-pointer">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       className="h-5 w-5 text-gray-600"
+       fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5" />
+  </svg>
+  <span className="text-sm font-medium">{cartCount}</span>
+</div>
 
           {/* Login */}
           <a className="text-sm font-medium text-gray-600 hover:text-black cursor-pointer hidden sm:inline">
