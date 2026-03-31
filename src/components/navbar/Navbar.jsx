@@ -26,16 +26,38 @@ const Navbar = ({ cartCount }) => {
         </div>
 
         {/* 🔹 RIGHT */}
-        <div className="flex items-center gap-5">
+     <div className="flex items-center gap-5">
 
-       <div className="flex items-center gap-1 cursor-pointer">
-  <svg xmlns="http://www.w3.org/2000/svg"
-       className="h-5 w-5 text-gray-600"
-       fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5" />
-  </svg>
-  <span className="text-sm font-medium">{cartCount}</span>
+  <div className="relative flex items-center cursor-pointer">
+    
+    {/* 🛒 Cart Icon with wheels */}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5 text-gray-600"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 3h2l.4 2M7 13h10l4-8H5.4"
+      />
+      {/* wheels */}
+      <circle cx="9" cy="20" r="1.3" />
+      <circle cx="17" cy="20" r="1.3" />
+    </svg>
+
+    {/* 🔴 Badge on top */}
+    {cartCount > 0 && (
+      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold px-1 rounded-full">
+        {cartCount}
+      </span>
+    )}
+    
+ 
+
 </div>
 
           {/* Login */}
