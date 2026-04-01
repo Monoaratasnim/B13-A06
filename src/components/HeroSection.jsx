@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="flex flex-col gap-4">
         {/* Badge with dot */}<div>
 <span className="inline-flex items-center text-purple-700 bg-[#c5d6e4] rounded-full text-sm font-medium px-1 py-0.5">
-  <span className="w-2 h-2 bg-purple-700 rounded-full mr-1 shrink-0"></span>
+  <span className="w-2 h-2 bg-purple-700  rounded-full mr-1 ml-1 shrink-0"></span>
   <span className="px-1 py-1">New: AI-Powered Tools Available</span>
 </span></div>
 

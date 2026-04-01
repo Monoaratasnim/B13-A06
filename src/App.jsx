@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import StepsSection from './components/StepsSection.jsx';
 import PricingSection from './components/PricingSection.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -36,6 +37,7 @@ function App() {
         
        <StepsSection />
       <PricingSection />
+      <Footer/>
     </>
   );
 }
