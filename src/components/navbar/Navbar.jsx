@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"; // Cart icon with wheels
 
 const Navbar = ({ cartCount }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,14 +9,14 @@ const Navbar = ({ cartCount }) => {
     <div className="w-full bg-white border border-[#F2F2F2]">
       <div className="flex items-center justify-between px-12.5 py-5">
 
-        {/* 🔹 LEFT */}
+        {/*  LEFT */}
         <div className="shrink-0">
           <a className="text-2xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
             DigiTools
           </a>
         </div>
 
-        {/* 🔹 CENTER (hidden on small screens) */}
+        {/*  CENTER (hidden on small screens) */}
         <div className="flex-1 justify-center hidden lg:flex">
           <ul className="flex gap-8 text-sm font-medium text-gray-600">
             <li><a className="hover:text-black">Products</a></li>
@@ -25,40 +27,19 @@ const Navbar = ({ cartCount }) => {
           </ul>
         </div>
 
-        {/* 🔹 RIGHT */}
-     <div className="flex items-center gap-5">
+        {/*  RIGHT */}
+        <div className="flex items-center gap-5">
 
-  <div className="relative flex items-center cursor-pointer">
-    
-    {/* 🛒 Cart Icon with wheels */}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 text-gray-600"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M3 3h2l.4 2M7 13h10l4-8H5.4"
-      />
-      {/* wheels */}
-      <circle cx="9" cy="20" r="1.3" />
-      <circle cx="17" cy="20" r="1.3" />
-    </svg>
-
-    {/* 🔴 Badge on top */}
-    {cartCount > 0 && (
-      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold px-1 rounded-full">
-        {cartCount}
-      </span>
-    )}
-    
- 
-
-</div>
+          {/* Cart Icon */}
+          <div className="relative flex items-center cursor-pointer text-xl">
+            <FontAwesomeIcon icon={faShoppingCart} />
+            {/* 🔴 Badge on top */}
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold px-1 rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </div>
 
           {/* Login */}
           <a className="text-sm font-medium text-gray-600 hover:text-black cursor-pointer hidden sm:inline">

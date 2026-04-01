@@ -80,7 +80,7 @@ const Footer = () => {
 
       </div>
 
-      {/* 🔹 Bottom Section */}
+      {/*  Bottom Section */}
       <div className="border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-4 py-6 
           flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 text-center md:text-left">

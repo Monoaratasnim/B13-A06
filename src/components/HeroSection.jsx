@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../assets/banner.png"; // Replace with your banner image path
+import banner from "../assets/banner.png"; 
 import play from "../assets/play.png";
 const HeroSection = () => {
   return (

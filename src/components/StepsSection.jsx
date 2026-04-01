@@ -46,7 +46,7 @@ const StepsSection = () => {
                 {step.id}
               </span>
 
-              {/* ✅ Image Icon */}
+              {/*  Image Icon */}
               <img
                 src={step.icon}
                 alt={step.title}

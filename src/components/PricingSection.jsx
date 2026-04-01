@@ -54,7 +54,7 @@ const PricingSection = () => {
           Choose the plan that fits your needs.
         </p>
 
-        {/* ✅ Responsive Grid */}
+     
         <div className="grid md:grid-cols-3 gap-6">
           {plans.map((plan, i) => (
             <div
@@ -65,7 +65,7 @@ const PricingSection = () => {
                   : "bg-white border-gray-200 hover:shadow-md"
               }`}
             >
-              {/* ✅ Gradient Highlight for Pro */}
+           
               {plan.popular && (
                 <span className="bg-white text-purple-600 text-xs px-3 py-1 rounded-full inline-block mb-3 font-semibold">
                   Most Popular
