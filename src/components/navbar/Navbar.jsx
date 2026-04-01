@@ -33,7 +33,7 @@ const Navbar = ({ cartCount }) => {
           {/* Cart Icon */}
           <div className="relative flex items-center cursor-pointer text-xl">
             <FontAwesomeIcon icon={faShoppingCart} />
-            {/* 🔴 Badge on top */}
+            {/* Badge on top */}
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold px-1 rounded-full">
                 {cartCount}
