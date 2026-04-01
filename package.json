@@ -3,14 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
- 
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+   "build:github": "cross-env DEPLOY_ENV=github vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
@@ -24,6 +21,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "cross-env": "^10.1.0",
     "daisyui": "^5.5.19",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -37,6 +35,5 @@
       "vite": "$vite"
     }
   },
-  "homepage": "https://Monoaratasnim.github.io/B13-A06" 
-
+  "homepage": "https://Monoaratasnim.github.io/B13-A06"
 }

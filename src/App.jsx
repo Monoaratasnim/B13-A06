@@ -5,6 +5,8 @@ import HeroSection from './components/HeroSection.jsx';
 import MainSection from './components/MainSection.jsx';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import StepsSection from './components/StepsSection.jsx';
+import PricingSection from './components/PricingSection.jsx';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -12,7 +14,7 @@ function App() {
 
   // Fetch products from public/products.json
  useEffect(() => {
-  fetch(`${import.meta.env.BASE_URL}products.json`)
+    fetch('/products.json')
     .then(res => res.json())
     .then(data => setProducts(data))
     .catch(err => console.log(err));
@@ -31,6 +33,9 @@ function App() {
 
       {/* Toast notifications */}
       <ToastContainer position="top-right" autoClose={2000} />
+        
+       <StepsSection />
+      <PricingSection />
     </>
   );
 }
